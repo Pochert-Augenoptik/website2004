@@ -124,6 +124,8 @@ body {
   cursor: pointer;
   border-radius: 4px;
   width: 100%;
+  max-width: 420px; /* limit maximum width so CTA doesn't get too large on desktop */
+  margin: 0 auto;   /* center when constrained by max-width */
   transition: background-color 0.3s, transform 0.2s;
   active-color: #008C82;
 }
