@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
@@ -13,42 +17,45 @@ body {
 
 .header {
   background-color: white;
-  padding: 1rem 2rem;
+  padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .logo img {
-  height: 60px;
+  height: 50px;
   width: auto;
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
-  flex: 1;
+  gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .nav-link {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
-  padding: 0.5rem 0;
-  transition: color 0.3s;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 3px;
 }
 
-.nav-link:hover,
+.nav-link:active,
 .nav-link.active {
   color: #00A99D;
 }
@@ -56,14 +63,14 @@ body {
 .phone {
   color: #00A99D;
   font-weight: 600;
-  font-size: 1rem;
-  white-space: nowrap;
+  font-size: 0.9rem;
+  display: block;
 }
 
 .hero {
   position: relative;
-  height: 600px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('public/hero-bg.jpg');
+  height: 400px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('public/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -71,144 +78,146 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
+  gap: 1.5rem;
 }
 
 .hero-content {
-  max-width: 800px;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .hero-subtitle {
   color: #666;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
 }
 
 .hero-description {
   color: #666;
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .hero-cta {
   width: 100%;
-  max-width: 700px;
+  padding: 0 1rem;
 }
 
 .cta-button {
   background-color: #00A99D;
   color: white;
   border: none;
-  padding: 1.2rem 3rem;
-  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   cursor: pointer;
   border-radius: 4px;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
+  active-color: #008C82;
 }
 
-.cta-button:hover {
+.cta-button:active {
   background-color: #008C82;
+  transform: scale(0.98);
 }
 
 .welcome {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-  text-align: center;
+  padding: 2rem 1.5rem;
 }
 
 .welcome-title {
   color: #1675bf;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
 .welcome-text {
-  text-align: left;
   color: #555;
   line-height: 1.8;
 }
 
 .welcome-text p {
   margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .wave-divider {
-  height: 150px;
+  height: 80px;
   background: linear-gradient(to bottom,
     white 0%,
-    white 30%,
-    rgba(0, 169, 157, 0.1) 40%,
-    rgba(0, 169, 157, 0.2) 50%,
-    rgba(0, 169, 157, 0.3) 60%,
+    white 20%,
+    rgba(0, 169, 157, 0.15) 35%,
+    rgba(0, 169, 157, 0.25) 50%,
     #00A99D 100%
   );
-  position: relative;
 }
 
 .hours-section {
   background-color: #00A99D;
-  padding: 4rem 2rem;
+  padding: 2rem 1.5rem;
 }
 
 .hours-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.owner-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .owner-image img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
 }
 
 .hours-card {
-  background-color: #00A99D;
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
-  padding: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .hours-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 0.5rem;
   opacity: 0.95;
 }
 
 .hours-title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 .hours-list {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hours-item {
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.9rem;
 }
 
 .hours-item .day {
@@ -217,61 +226,64 @@ body {
 
 .hours-item .time {
   text-align: right;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 
 .hours-note {
   margin-top: 1rem;
   font-style: italic;
   opacity: 0.9;
+  font-size: 0.85rem;
 }
 
 .call-button {
   background-color: #004c81;
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  border-radius: 30px;
-  transition: background-color 0.3s;
-  margin-top: 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
 }
 
-.call-button:hover {
+.call-button:active {
   background-color: #003961;
+  transform: scale(0.98);
 }
 
 .footer {
   background-color: #f5f5f5;
-  padding: 3rem 2rem;
+  padding: 2rem 1.5rem;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .footer-column h3 {
   color: #00A99D;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
 .footer-column p {
   color: #666;
   line-height: 1.8;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .footer-tags {
   color: #999;
-  font-size: 0.9rem;
-  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 .footer-links {
@@ -286,32 +298,180 @@ body {
   color: #666;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 0.9rem;
 }
 
-.footer-links a:hover {
+.footer-links a:active {
   color: #00A99D;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 640px) {
+  .header {
+    padding: 1.25rem 2rem;
+  }
+
   .header-container {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .logo img {
+    height: 55px;
   }
 
   .nav {
-    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
+
+  .phone {
+    font-size: 1rem;
+  }
+
+  .hero {
+    height: 450px;
+    padding: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 1.1rem 2rem;
+  }
+
+  .welcome {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .welcome-title {
+    font-size: 1.75rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.95rem;
+  }
+
+  .wave-divider {
+    height: 120px;
+  }
+
+  .hours-section {
+    padding: 3rem 2rem;
   }
 
   .hours-container {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hours-card {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .hours-title {
+    font-size: 2rem;
+  }
+
+  .call-button {
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+  }
+
+  .footer {
+    padding: 3rem 2rem;
   }
 
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .footer-column:first-child {
+    flex: 2;
+  }
+
+  .footer-column:last-child {
+    flex: 1;
+  }
+
+  .footer-column h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-column p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    height: 550px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .welcome {
+    padding: 4rem 2rem;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .wave-divider {
+    height: 150px;
+  }
+
+  .hours-section {
+    padding: 4rem 2rem;
+  }
+
+  .hours-title {
+    font-size: 2.5rem;
+  }
+
+  .footer {
+    padding: 3rem 2rem;
   }
 }
