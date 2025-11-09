@@ -158,9 +158,6 @@ body {
   height: 80px;
   background: linear-gradient(to bottom,
     white 0%,
-    white 20%,
-    rgba(0, 169, 157, 0.15) 35%,
-    rgba(0, 169, 157, 0.25) 50%,
     #00A99D 100%
   );
 }
