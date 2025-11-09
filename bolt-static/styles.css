@@ -71,7 +71,7 @@ body {
   height: 400px;
   background-image: url('public/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   display: flex;
   flex-direction: column;
   align-items: center;
