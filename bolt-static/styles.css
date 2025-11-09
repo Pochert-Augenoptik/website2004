@@ -369,10 +369,6 @@ body {
     font-size: 0.95rem;
   }
 
-  .wave-divider {
-    height: 120px;
-  }
-
   .hours-section {
     padding: 3rem 2rem;
   }
@@ -454,10 +450,6 @@ body {
 
   .welcome-title {
     font-size: 2rem;
-  }
-
-  .wave-divider {
-    height: 150px;
   }
 
   .hours-section {
