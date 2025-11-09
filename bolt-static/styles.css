@@ -68,7 +68,6 @@ body {
 }
 
 .hero {
-  position: relative;
   height: 400px;
   background-image: url('public/hero-bg.jpg');
   background-size: cover;
@@ -82,15 +81,10 @@ body {
   gap: 1.5rem;
 }
 
-.hero-content {
-  width: 100%;
-}
-
 .hero-subtitle {
   color: #666;
   font-size: 0.8rem;
   letter-spacing: 1.5px;
-  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
@@ -98,19 +92,12 @@ body {
   font-size: 1.75rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 0.75rem;
   letter-spacing: 1px;
 }
 
 .hero-description {
   color: #666;
   font-size: 0.9rem;
-  margin: 0;
-}
-
-.hero-cta {
-  width: 100%;
-  padding: 0 1rem;
 }
 
 .cta-button {
