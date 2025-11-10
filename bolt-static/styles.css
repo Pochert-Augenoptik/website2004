@@ -81,13 +81,6 @@ body {
   background-image: url('public/hero-bg.jpg');
   background-size: cover;
   background-position: bottom;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-  gap: 1.5rem;
 }
 
 .hero-subtitle {
@@ -107,6 +100,26 @@ body {
 .hero-description {
   color: #666;
   font-size: 0.9rem;
+}
+
+.glass-box {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* Für Safari-Kompatibilität */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
 }
 
 .cta-button {
