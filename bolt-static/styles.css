@@ -9,6 +9,7 @@ html {
 }
 
 :root {
+  --color-webneu: #00A79D;
   --color-primary: #00A99D;
   --color-primary-dark: #008C82;
   --color-accent: #1675bf;
