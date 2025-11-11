@@ -113,94 +113,99 @@ body {
   );
 }
 
-.hours-section {
-  background-color: var(--color-primary);
+.info-section {
+  background-image: url('public/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
   padding: 2rem 1.5rem;
+  background-attachment: fixed;
 }
 
-.hours-container {
+.info-cards-container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.owner-image {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.owner-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hours-card {
-  background-color: rgba(0, 0, 0, 0.1);
+.info-card {
+  background-color: var(--color-webneu);
   color: white;
   padding: 1.5rem;
   border-radius: 8px;
+  backdrop-filter: none;
 }
 
-.hours-title {
-  font-size: 1.75rem;
+.info-card-title {
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
 
-.hours-list {
-  margin-bottom: 1.5rem;
-}
-
-.hours-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+.info-card-content {
   font-size: 0.9rem;
 }
 
-/* Add top border to the first item so the list appears enclosed */
-.hours-list .hours-item:first-child {
-  border-top: 1px solid rgba(255,255,255,0.2);
+.hours-item-compact {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.hours-item .day {
+.hours-item-compact .day {
   font-weight: 500;
 }
 
-.hours-item .time {
+.hours-item-compact .time {
   text-align: right;
   flex-shrink: 0;
   margin-left: 1rem;
 }
 
-.hours-note {
+.hours-item-compact:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hours-note-compact {
   margin-top: 1rem;
   font-style: italic;
   opacity: 0.9;
   font-size: 0.85rem;
 }
 
-.call-button {
-  background-color: var(--color-call);
-  color: white;
-  border: none;
-  padding: 0.9rem 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  border-radius: 25px;
-  transition: background-color 0.3s, transform 0.2s;
-  width: 100%;
+.contact-item {
+  margin-bottom: 1.5rem;
 }
 
-.call-button:active {
-  background-color: var(--color-call-dark);
-  transform: scale(0.98);
+.contact-item h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.contact-item p {
+  line-height: 1.6;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  display: inline-block;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
+}
+
+.maps-link {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 500;
 }
 
 .footer {
@@ -301,28 +306,25 @@ body {
     font-size: 0.95rem;
   }
 
-  .hours-section {
+  .info-section {
     padding: 3rem 2rem;
+    min-height: auto;
   }
 
-  .hours-container {
+  .info-cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
-  .hours-card {
-    background-color: rgba(0, 0, 0, 0.15);
+  .info-card {
+    background-color: var(--color-webneu);
   }
 
-  .hours-title {
-    font-size: 2rem;
-  }
-
-  .call-button {
-    font-size: 0.9rem;
-    padding: 1rem 2rem;
+  .info-card-title {
+    font-size: 1.75rem;
   }
 
   .footer {
@@ -376,12 +378,12 @@ body {
     font-size: 2rem;
   }
 
-  .hours-section {
+  .info-section {
     padding: 4rem 2rem;
   }
 
-  .hours-title {
-    font-size: 2.5rem;
+  .info-card-title {
+    font-size: 2rem;
   }
 
   .footer {
