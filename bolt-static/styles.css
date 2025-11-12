@@ -11,15 +11,9 @@ html {
 :root {
   --color-primary-rgb: 0 167 157; /* #00a79d */
   --color-primary-dark-rgb: 0 140 130;
-  --color-accent-rgb: 22 117 191;
   --color-call-rgb: 0 76 129;
   --color-call-dark-rgb: 0 57 97;
   --color-ocker-rgb: 223 230 221;
-  --color-a-rgb: 39 64 96;
-  --color-b-rgb: 51 92 129;
-  --color-c-rgb: 27 40 69;
-  --white-rgb: 255 255 255;
-  --black-rgb: 0 0 0;
 }
 
 body {
@@ -32,7 +26,7 @@ body {
 .header {
   background-color: white;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(var(--black-rgb) / 0.1);
+  box-shadow: 0 2px 4px rgba(0 0 0 / 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -93,7 +87,7 @@ body {
 }
 
 .welcome-title {
-  color: rgb(var(--color-accent-rgb));
+  color: #1675bf;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -168,7 +162,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(var(--white-rgb) / 0.2);
+  border-bottom: 1px solid rgba(255 255 255 / 0.2);
 }
 
 .hours-item-compact .day {
@@ -182,7 +176,7 @@ body {
 }
 
 .hours-item-compact:first-child {
-  border-top: 1px solid rgba(var(--white-rgb) / 0.2);
+  border-top: 1px solid rgba(255 255 255 / 0.2);
 }
 
 .hours-note-compact {
@@ -219,7 +213,7 @@ body {
 }
 
 .maps-link {
-  background-color: rgba(var(--white-rgb) / 0.2);
+  background-color: rgba(255 255 255 / 0.2);
   padding: 0.75rem 1rem;
   border-radius: 4px;
   display: inline-block;
@@ -233,7 +227,7 @@ body {
   gap: 0.75rem;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(var(--white-rgb) / 0.2);
+  border-top: 1px solid rgba(255 255 255 / 0.2);
 }
 
 /* Base action button */
