@@ -128,11 +128,40 @@ body {
 }
 
 .info-card {
-  background-color: var(--color-webneu);
   color: white;
   padding: 1.5rem;
   border-radius: 8px;
   backdrop-filter: none;
+}
+
+/* Color variants for info cards */
+.info-card--webneu {
+  background-color: var(--color-webneu);
+}
+
+.info-card--primary {
+  background-color: var(--color-primary);
+}
+
+.info-card--primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.info-card--accent {
+  background-color: var(--color-accent);
+}
+
+.info-card--call {
+  background-color: var(--color-call);
+}
+
+.info-card--call-dark {
+  background-color: var(--color-call-dark);
+}
+
+.info-card--footer-bg {
+  background-color: var(--color-footer-bg);
+  color: #333;
 }
 
 .info-card-title {
@@ -142,8 +171,13 @@ body {
   letter-spacing: 0.5px;
 }
 
+.info-card--footer-bg .info-card-title {
+  color: var(--color-accent);
+}
+
 .info-card-content {
   font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
 
 .hours-item-compact {
@@ -206,6 +240,138 @@ body {
   border-radius: 4px;
   display: inline-block;
   font-weight: 500;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-card--footer-bg .button-group {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Base action button */
+.action-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+}
+
+/* Button color variants */
+.action-button--webneu {
+  background-color: var(--color-webneu);
+  color: white;
+}
+
+.action-button--webneu:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.action-button--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.action-button--primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.action-button--primary-dark {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+.action-button--primary-dark:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.action-button--accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.action-button--accent:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.action-button--call {
+  background-color: var(--color-call);
+  color: white;
+}
+
+.action-button--call:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.action-button--call-dark {
+  background-color: var(--color-call-dark);
+  color: white;
+}
+
+.action-button--call-dark:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Inverse button (white background with dark text) */
+.action-button--inverse {
+  background-color: white;
+  color: #333;
+  font-weight: 600;
+}
+
+.action-button--inverse:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Outline button (transparent background with border) */
+.action-button--outline {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-width: 2px;
+}
+
+.action-button--outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.info-card--footer-bg .action-button--inverse {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.info-card--footer-bg .action-button--inverse:hover {
+  opacity: 0.9;
+}
+
+.info-card--footer-bg .action-button--outline {
+  color: #333;
+  border-color: #333;
+}
+
+.info-card--footer-bg .action-button--outline:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .footer {
@@ -313,14 +479,10 @@ body {
 
   .info-cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
-  }
-
-  .info-card {
-    background-color: var(--color-webneu);
   }
 
   .info-card-title {
