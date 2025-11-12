@@ -148,38 +148,8 @@ body {
   background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
 }
 
-.info-card--accent {
-  background-color: rgba(var(--color-accent-rgb) / 0.8);
-}
-
 .info-card--call {
   background-color: rgba(var(--color-call-rgb) / 0.8);
-}
-
-.info-card--call-dark {
-  background-color: rgba(var(--color-call-dark-rgb) / 0.8);
-}
-
-.info-card--footer-bg {
-  background-color: rgba(var(--white-rgb) / 0.6);
-  color: #333;
-}
-
-.info-card--ocker {
-  background-color: rgba(var(--color-ocker-rgb) / 0.8);
-  color: #333;
-}
-
-.info-card--a {
-  background-color: rgba(var(--color-a-rgb) / 0.8);
-}
-
-.info-card--b {
-  background-color: rgba(var(--color-b-rgb) / 0.8);
-}
-
-.info-card--c {
-  background-color: rgba(var(--color-c-rgb) / 0.8);
 }
 
 .info-card-title {
@@ -187,14 +157,6 @@ body {
   font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
-}
-
-.info-card--footer-bg .info-card-title {
-  color: rgb(var(--color-accent-rgb));
-}
-
-.info-card--ocker .info-card-title {
-  color: rgb(var(--color-a-rgb));
 }
 
 .info-card-content {
@@ -274,10 +236,6 @@ body {
   border-top: 1px solid rgba(var(--white-rgb) / 0.2);
 }
 
-.info-card--footer-bg .button-group {
-  border-top-color: rgba(var(--black-rgb) / 0.1);
-}
-
 /* Base action button */
 .action-button {
   display: inline-block;
@@ -313,16 +271,6 @@ body {
   transform: translateY(-2px);
 }
 
-.action-button--accent {
-  background-color: rgb(var(--color-accent-rgb));
-  color: white;
-}
-
-.action-button--accent:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
 .action-button--call {
   background-color: rgb(var(--color-call-rgb));
   color: white;
@@ -352,98 +300,6 @@ body {
   opacity: 0.9;
   transform: translateY(-2px);
 }
-
-.action-button--a {
-  background-color: rgb(var(--color-a-rgb));
-  color: white;
-}
-
-.action-button--a:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.action-button--b {
-  background-color: rgb(var(--color-b-rgb));
-  color: white;
-}
-
-.action-button--b:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.action-button--c {
-  background-color: rgb(var(--color-c-rgb));
-  color: white;
-}
-
-.action-button--c:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-/* Inverse button (white background with dark text) */
-.action-button--inverse {
-  background-color: white;
-  color: #333;
-  font-weight: 600;
-}
-
-.action-button--inverse:hover {
-  background-color: rgba(var(--white-rgb) / 0.9);
-  box-shadow: 0 4px 12px rgba(var(--black-rgb) / 0.15);
-}
-
-/* Outline button (transparent background with border) */
-.action-button--outline {
-  background-color: transparent;
-  color: white;
-  border-color: white;
-  border-width: 2px;
-}
-
-.action-button--outline:hover {
-  background-color: rgba(var(--white-rgb) / 0.1);
-  transform: translateY(-2px);
-}
-
-.info-card--footer-bg .action-button--inverse {
-  background-color: rgb(var(--color-accent-rgb));
-  color: white;
-}
-
-.info-card--footer-bg .action-button--inverse:hover {
-  opacity: 0.9;
-}
-
-.info-card--footer-bg .action-button--outline {
-  color: #333;
-  border-color: #333;
-}
-
-.info-card--footer-bg .action-button--outline:hover {
-  background-color: rgba(var(--black-rgb) / 0.05);
-}
-
-.info-card--ocker .action-button--inverse {
-  background-color: rgb(var(--color-a-rgb));
-  color: white;
-}
-
-.info-card--ocker .action-button--inverse:hover {
-  opacity: 0.9;
-}
-
-.info-card--ocker .action-button--outline {
-  color: #333;
-  border-color: #333;
-}
-
-.info-card--ocker .action-button--outline:hover {
-  background-color: rgba(var(--black-rgb) / 0.05);
-}
-
 
 .call-button {
   background-color: rgb(var(--color-call-rgb));
