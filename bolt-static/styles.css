@@ -282,7 +282,7 @@ body {
 .action-button {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 25px;
   font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
@@ -444,6 +444,28 @@ body {
   background-color: rgba(var(--black-rgb) / 0.05);
 }
 
+
+.call-button {
+  background-color: rgb(var(--color-call-rgb));
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.call-button:active {
+  background-color: rgb(var(--color-call-dark-rgb));
+  transform: scale(0.98);
+}
+
+
 .footer {
   background-color: #f5f5f5;
   padding: 2rem 1.5rem;
@@ -557,6 +579,11 @@ body {
 
   .info-card-title {
     font-size: 1.75rem;
+  }
+
+  .call-button {
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
   }
 
   .footer {
