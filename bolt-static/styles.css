@@ -9,8 +9,7 @@ html {
 }
 
 :root {
-  --color-webneu-rgb: 0 167 157;
-  --color-primary-rgb: 0 169 157;
+  --color-primary-rgb: 0 167 157; /* #00a79d */
   --color-primary-dark-rgb: 0 140 130;
   --color-accent-rgb: 22 117 191;
   --color-call-rgb: 0 76 129;
@@ -141,10 +140,6 @@ body {
 }
 
 /* Color variants for info cards */
-.info-card--webneu {
-  background-color: rgba(var(--color-webneu-rgb) / 0.8);
-}
-
 .info-card--primary {
   background-color: rgba(var(--color-primary-rgb) / 0.8);
 }
@@ -298,16 +293,6 @@ body {
 }
 
 /* Button color variants */
-.action-button--webneu {
-  background-color: rgb(var(--color-webneu-rgb));
-  color: white;
-}
-
-.action-button--webneu:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
 .action-button--primary {
   background-color: rgb(var(--color-primary-rgb));
   color: white;
