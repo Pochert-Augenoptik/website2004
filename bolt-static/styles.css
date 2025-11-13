@@ -103,14 +103,6 @@ body {
   font-size: 0.95rem;
 }
 
-.wave-divider {
-  height: 80px;
-  background: linear-gradient(to bottom,
-    white 0%,
-    rgb(var(--color-primary-rgb)) 100%
-  );
-}
-
 .info-section {
   background-image: url('public/hero-bg.jpg');
   background-size: cover;
