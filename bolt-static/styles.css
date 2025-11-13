@@ -34,9 +34,11 @@ body {
 
 .header-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo img {
@@ -47,9 +49,9 @@ body {
 .nav {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-link {
@@ -61,6 +63,7 @@ body {
   padding: 0.5rem 0.75rem;
   transition: color 0.3s, background-color 0.3s;
   border-radius: 3px;
+  white-space: nowrap;
 }
 
 .nav-link:active,
@@ -68,11 +71,10 @@ body {
   color: rgb(var(--color-primary-rgb));
 }
 
-.phone {
+.nav-link.phone {
   color: rgb(var(--color-primary-rgb));
   font-weight: 600;
   font-size: 0.9rem;
-  display: block;
 }
 
 .hero {
@@ -355,8 +357,6 @@ body {
   }
 
   .header-container {
-    flex-direction: row;
-    justify-content: space-between;
     gap: 2rem;
   }
 
@@ -365,8 +365,6 @@ body {
   }
 
   .nav {
-    flex: 1;
-    justify-content: center;
     gap: 2rem;
   }
 
@@ -375,9 +373,10 @@ body {
     padding: 0.5rem 0;
   }
 
-  .phone {
+  .nav-link.phone {
     font-size: 1rem;
   }
+
 
   .hero {
     height: 450px;
@@ -461,10 +460,6 @@ body {
 
   .nav-link {
     font-size: 0.95rem;
-  }
-
-  .hero {
-    height: 550px;
   }
 
   .welcome {
