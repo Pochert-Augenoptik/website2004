@@ -56,7 +56,7 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #555; /* match .welcome-text color */
   font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
@@ -73,7 +73,7 @@ body {
 
 .nav-link.phone {
   color: rgb(var(--color-primary-rgb));
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
 }
 
