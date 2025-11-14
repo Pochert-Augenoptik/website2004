@@ -109,36 +109,108 @@ body {
   font-size: 0.95rem;
 }
 
-/* Lightweight details/summary styling to match the site's design */
-.welcome-text details {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(0,0,0,0.06);
-  padding: 12px 14px;
-  border-radius: 8px;
+.welcome-text details,
+.footer-links details {
   margin: 12px 0;
-  transition: background .12s ease, border-color .12s ease;
+  transition: background .12s ease, border-color .12s ease, box-shadow .12s ease;
 }
-.welcome-text summary {
-  font-weight: 700;
-  cursor: pointer;
+
+.welcome-text summary,
+.footer-links summary {
   list-style: none;
-  outline: none;
-  display: block;
+  cursor: pointer;
   user-select: none;
+  outline: none;
+  display: inline-block;
+  padding: 0.15rem 0;
 }
-.welcome-text summary::-webkit-details-marker { display: none; }
-.welcome-text summary::before {
+
+.welcome-text summary::-webkit-details-marker,
+.footer-links summary::-webkit-details-marker {
+  display: none;
+}
+
+.welcome-text summary::before,
+.footer-links summary::before {
   content: "▸";
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 8px;
   transition: transform .14s ease;
-  color: inherit;
+  color: currentColor;
+  font-size: 0.95rem;
+  vertical-align: baseline;
 }
-.welcome-text details[open] summary::before { transform: rotate(90deg); }
-.welcome-text details > *:not(summary) { margin-top: 8px; color: inherit; }
-/* Slightly reduce spacing inside details when nested content is present */
-.welcome-text details p, .welcome-text details h3, .welcome-text details blockquote {
+.welcome-text details[open] summary::before,
+.footer-links details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.welcome-text details {
+  /* slightly lighter card feel to blend with the section */
+  padding: 0.65rem 0;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+}
+
+.welcome-text summary {
+  color: rgb(var(--color-primary-rgb));
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.welcome-text details > *:not(summary) {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.welcome-text details[open] {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+}
+
+/* Slightly reduce spacing inside nested welcome content */
+.welcome-text details p,
+.welcome-text details h3,
+.welcome-text details blockquote {
   margin: 6px 0;
+}
+
+.footer-links details {
+  /* no card feel in footer — keep things compact */
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.footer-links summary {
+  color: #666;            /* paragraph-like muted color */
+  font-weight: 400;       /* normal weight */
+  font-size: 0.9rem;      /* match .footer-links a / p sizing */
+  letter-spacing: normal;
+  display: inline;        /* inline to flow like a sentence */
+}
+
+/* Footer expanded content appears as regular paragraph text, slightly indented */
+.footer-links details > *:not(summary) {
+  margin-top: 6px;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 0.35rem;
+}
+
+/* ensure the impressum pre-formatted paragraph remains readable */
+.footer-links details[open] p[style] {
+  white-space: pre-line;
 }
 
 .info-section {
@@ -379,6 +451,116 @@ body {
 
 .footer-links a:active {
   color: rgb(var(--color-primary-rgb));
+}
+
+/* Footer details/summary styling to fit with footer design */
+/* --- details/summary: shared base and per-section overrides --- */
+/* shared base for both welcome (Dienstleistungen) and footer details */
+.welcome-text details,
+.footer-links details {
+  margin: 12px 0;
+  transition: background .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+.welcome-text summary,
+.footer-links summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  display: inline-block;
+  padding: 0.15rem 0;
+}
+
+/* hide default marker and use a small chevron for both */
+.welcome-text summary::-webkit-details-marker,
+.footer-links summary::-webkit-details-marker {
+  display: none;
+}
+
+.welcome-text summary::before,
+.footer-links summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform .14s ease;
+  color: currentColor;
+  font-size: 0.95rem;
+  vertical-align: baseline;
+}
+.welcome-text details[open] summary::before,
+.footer-links details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* ---------------- welcome (Dienstleistungen) — keep header-like look ---------------- */
+.welcome-text details {
+  /* slightly lighter card feel to blend with the section */
+  padding: 0.65rem 0;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+}
+
+.welcome-text summary {
+  color: rgb(var(--color-primary-rgb));
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.welcome-text details > *:not(summary) {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.welcome-text details[open] {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+}
+
+/* Slightly reduce spacing inside nested welcome content */
+.welcome-text details p,
+.welcome-text details h3,
+.welcome-text details blockquote {
+  margin: 6px 0;
+}
+
+/* ---------------- footer — make details behave like paragraph text ---------------- */
+.footer-links details {
+  /* no card feel in footer — keep things compact */
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.footer-links summary {
+  color: #666;            /* paragraph-like muted color */
+  font-weight: 400;       /* normal weight */
+  font-size: 0.9rem;      /* match .footer-links a / p sizing */
+  letter-spacing: normal;
+  display: inline;        /* inline to flow like a sentence */
+}
+
+/* Footer expanded content appears as regular paragraph text, slightly indented */
+.footer-links details > *:not(summary) {
+  margin-top: 6px;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 0.35rem;
+}
+
+/* ensure the impressum pre-formatted paragraph remains readable */
+.footer-links details[open] p[style] {
+  white-space: pre-line;
 }
 
 @media (min-width: 640px) {
