@@ -109,6 +109,38 @@ body {
   font-size: 0.95rem;
 }
 
+/* Lightweight details/summary styling to match the site's design */
+.welcome-text details {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 12px 0;
+  transition: background .12s ease, border-color .12s ease;
+}
+.welcome-text summary {
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  display: block;
+  user-select: none;
+}
+.welcome-text summary::-webkit-details-marker { display: none; }
+.welcome-text summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform .14s ease;
+  color: inherit;
+}
+.welcome-text details[open] summary::before { transform: rotate(90deg); }
+.welcome-text details > *:not(summary) { margin-top: 8px; color: inherit; }
+/* Slightly reduce spacing inside details when nested content is present */
+.welcome-text details p, .welcome-text details h3, .welcome-text details blockquote {
+  margin: 6px 0;
+}
+
 .info-section {
   background-image: url('public/hero-bg.jpg');
   background-size: cover;
@@ -128,7 +160,7 @@ body {
   padding: 1.5rem;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  background-color: rgba(var(--color-primary-dark-rgb) / 0.8);/
+  background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
 }
 
 .info-card-title {
