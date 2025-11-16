@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   background-color: white;
   line-height: 1.6;
@@ -59,7 +59,9 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   padding: 0.5rem 0.75rem;
-  transition: color 0.3s, background-color 0.3s;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
   border-radius: 3px;
   white-space: nowrap;
 }
@@ -77,7 +79,7 @@ body {
 
 .hero {
   height: 400px;
-  background-image: url('public/owner.jpg');
+  background-image: url("public/owner.jpg");
   background-size: cover;
   background-position: left;
 }
@@ -112,7 +114,10 @@ body {
 .welcome-text details,
 .footer-links details {
   margin: 12px 0;
-  transition: background .12s ease, border-color .12s ease, box-shadow .12s ease;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    box-shadow 0.12s ease;
 }
 
 .welcome-text summary,
@@ -135,7 +140,7 @@ body {
   content: "▸";
   display: inline-block;
   margin-right: 8px;
-  transition: transform .14s ease;
+  transition: transform 0.14s ease;
   color: currentColor;
   font-size: 0.95rem;
   vertical-align: baseline;
@@ -170,9 +175,9 @@ body {
 .welcome-text details[open] {
   padding: 0.75rem;
   border-radius: 8px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
 }
 
 /* Slightly reduce spacing inside nested welcome content */
@@ -192,11 +197,11 @@ body {
 }
 
 .footer-links summary {
-  color: #666;            /* paragraph-like muted color */
-  font-weight: 400;       /* normal weight */
-  font-size: 0.9rem;      /* match .footer-links a / p sizing */
+  color: #666; /* paragraph-like muted color */
+  font-weight: 400; /* normal weight */
+  font-size: 0.9rem; /* match .footer-links a / p sizing */
   letter-spacing: normal;
-  display: inline;        /* inline to flow like a sentence */
+  display: inline; /* inline to flow like a sentence */
 }
 
 /* Footer expanded content appears as regular paragraph text, slightly indented */
@@ -214,7 +219,7 @@ body {
 }
 
 .info-section {
-  background-image: url('public/hero-bg.jpg');
+  background-image: url("public/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   padding: 2rem 1.5rem;
@@ -393,7 +398,9 @@ body {
   letter-spacing: 0.5px;
   cursor: pointer;
   border-radius: 25px;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
   width: 100%;
   margin: 0.5rem 0;
 }
@@ -402,7 +409,6 @@ body {
   background-color: rgb(var(--color-call-dark-rgb));
   transform: scale(0.98);
 }
-
 
 .footer {
   background-color: #f5f5f5;
@@ -459,7 +465,10 @@ body {
 .welcome-text details,
 .footer-links details {
   margin: 12px 0;
-  transition: background .12s ease, border-color .12s ease, box-shadow .12s ease;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    box-shadow 0.12s ease;
 }
 
 .welcome-text summary,
@@ -483,7 +492,7 @@ body {
   content: "▸";
   display: inline-block;
   margin-right: 8px;
-  transition: transform .14s ease;
+  transition: transform 0.14s ease;
   color: currentColor;
   font-size: 0.95rem;
   vertical-align: baseline;
@@ -519,9 +528,9 @@ body {
 .welcome-text details[open] {
   padding: 0.75rem;
   border-radius: 8px;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
 }
 
 /* Slightly reduce spacing inside nested welcome content */
@@ -542,11 +551,11 @@ body {
 }
 
 .footer-links summary {
-  color: #666;            /* paragraph-like muted color */
-  font-weight: 400;       /* normal weight */
-  font-size: 0.9rem;      /* match .footer-links a / p sizing */
+  color: #666; /* paragraph-like muted color */
+  font-weight: 400; /* normal weight */
+  font-size: 0.9rem; /* match .footer-links a / p sizing */
   letter-spacing: normal;
-  display: inline;        /* inline to flow like a sentence */
+  display: inline; /* inline to flow like a sentence */
 }
 
 /* Footer expanded content appears as regular paragraph text, slightly indented */
@@ -588,7 +597,6 @@ body {
   .nav-link.phone {
     font-size: 1rem;
   }
-
 
   .hero {
     height: 450px;
