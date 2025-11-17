@@ -203,6 +203,222 @@
     </section>
 
     <footer class="footer">
+      <style>
+        .footer {
+          background-color: #f5f5f5;
+          padding: 2rem 1.5rem;
+        }
+
+        .footer-container {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .footer-column h3 {
+          color: rgb(var(--color-primary-rgb));
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+
+        .footer-column p {
+          color: #666;
+          line-height: 1.8;
+          margin-bottom: 0.75rem;
+          font-size: 0.9rem;
+        }
+
+        .footer-tags {
+          color: #999;
+          font-size: 0.8rem;
+          margin-top: 1rem;
+        }
+
+        .footer-links {
+          list-style: none;
+        }
+
+        .footer-links li {
+          margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+          color: #666;
+          text-decoration: none;
+          transition: color 0.3s;
+          font-size: 0.9rem;
+        }
+
+        .footer-links a:active {
+          color: rgb(var(--color-primary-rgb));
+        }
+
+        .footer-links details {
+          margin: 12px 0;
+          transition:
+            background 0.12s ease,
+            border-color 0.12s ease,
+            box-shadow 0.12s ease;
+        }
+
+        .footer-links summary {
+          list-style: none;
+          cursor: pointer;
+          user-select: none;
+          outline: none;
+          display: inline-block;
+          padding: 0.15rem 0;
+        }
+
+        .footer-links summary::-webkit-details-marker {
+          display: none;
+        }
+
+        .footer-links summary::before {
+          content: "▸";
+          display: inline-block;
+          margin-right: 8px;
+          transition: transform 0.14s ease;
+          color: currentColor;
+          font-size: 0.95rem;
+          vertical-align: baseline;
+        }
+
+        .footer-links details[open] summary::before {
+          transform: rotate(90deg);
+        }
+
+        .footer-links details {
+          margin: 12px 0;
+          transition:
+            background 0.12s ease,
+            border-color 0.12s ease,
+            box-shadow 0.12s ease;
+        }
+
+        .footer-links summary {
+          list-style: none;
+          cursor: pointer;
+          user-select: none;
+          outline: none;
+          display: inline-block;
+          padding: 0.15rem 0;
+        }
+
+        .footer-links summary::-webkit-details-marker {
+          display: none;
+        }
+
+        .footer-links summary::before {
+          content: "▸";
+          display: inline-block;
+          margin-right: 8px;
+          transition: transform 0.14s ease;
+          color: currentColor;
+          font-size: 0.95rem;
+          vertical-align: baseline;
+        }
+
+        .footer-links details[open] summary::before {
+          transform: rotate(90deg);
+        }
+
+        .footer-links details {
+          /* no card feel in footer — keep things compact */
+          padding: 0;
+          border-radius: 0;
+          background: transparent;
+          border: none;
+          box-shadow: none;
+        }
+
+        .footer-links summary {
+          color: #666; /* paragraph-like muted color */
+          font-weight: 400; /* normal weight */
+          font-size: 0.9rem; /* match .footer-links a / p sizing */
+          letter-spacing: normal;
+          display: inline; /* inline to flow like a sentence */
+        }
+
+        /* Footer expanded content appears as regular paragraph text, slightly indented */
+        .footer-links details > *:not(summary) {
+          margin-top: 6px;
+          color: #666;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          padding-left: 0.35rem;
+        }
+
+        /* ensure the impressum pre-formatted paragraph remains readable */
+        .footer-links details[open] p[style] {
+          white-space: pre-line;
+        }
+
+        /* ---------------- footer — make details behave like paragraph text ---------------- */
+        .footer-links details {
+          /* no card feel in footer — keep things compact */
+          padding: 0;
+          border-radius: 0;
+          background: transparent;
+          border: none;
+          box-shadow: none;
+        }
+
+        .footer-links summary {
+          color: #666; /* paragraph-like muted color */
+          font-weight: 400; /* normal weight */
+          font-size: 0.9rem; /* match .footer-links a / p sizing */
+          letter-spacing: normal;
+          display: inline; /* inline to flow like a sentence */
+        }
+
+        /* Footer expanded content appears as regular paragraph text, slightly indented */
+        .footer-links details > *:not(summary) {
+          margin-top: 6px;
+          color: #666;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          padding-left: 0.35rem;
+        }
+
+        /* ensure the impressum pre-formatted paragraph remains readable */
+        .footer-links details[open] p[style] {
+          white-space: pre-line;
+        }
+
+        @media (min-width: 640px) {
+          .footer {
+            padding: 3rem 2rem;
+          }
+
+          .footer-container {
+            flex-direction: row;
+            gap: 4rem;
+          }
+
+          .footer-column:first-child {
+            flex: 2;
+          }
+
+          .footer-column:last-child {
+            flex: 1;
+          }
+
+          .footer-column h3 {
+            font-size: 1.2rem;
+          }
+
+          .footer-column p {
+            font-size: 0.9rem;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .footer {
+            padding: 3rem 2rem;
+          }
+        }
+      </style>
       <div class="footer-container">
         <div class="footer-column">
           <h3>Mehr Informationen</h3>
