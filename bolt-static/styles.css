@@ -115,7 +115,7 @@ body {
 }
 
 .welcome-text details {
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 1rem;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(0, 0, 0, 0.07);
