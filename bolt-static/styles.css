@@ -112,6 +112,11 @@ body {
 }
 
 .welcome-text details {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.032);
   margin: 12px 0;
   transition:
     background 0.12s ease,
@@ -126,6 +131,10 @@ body {
   outline: none;
   display: inline-block;
   padding: 0.15rem 0;
+  color: rgb(var(--color-primary-rgb));
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
 
 .welcome-text summary::-webkit-details-marker {
@@ -146,41 +155,11 @@ body {
   transform: rotate(90deg);
 }
 
-.welcome-text details {
-  /* slightly lighter card feel to blend with the section */
-  padding: 0.65rem 0;
-  border-radius: 6px;
-  background: transparent;
-  border: none;
-}
-
-.welcome-text summary {
-  color: rgb(var(--color-primary-rgb));
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-}
-
 .welcome-text details > *:not(summary) {
   margin-top: 8px;
   color: #555;
   font-size: 0.95rem;
   line-height: 1.8;
-}
-
-.welcome-text details[open] {
-  padding: 0.75rem;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
-}
-
-/* Slightly reduce spacing inside nested welcome content */
-.welcome-text details p,
-.welcome-text details h3,
-.welcome-text details blockquote {
-  margin: 6px 0;
 }
 
 .info-section {
@@ -271,6 +250,7 @@ body {
   font-weight: 600;
   background-color: rgb(var(--color-call-rgb));
   color: white;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15);
 }
 
 .action-button:hover {
@@ -282,79 +262,6 @@ body {
 .action-button:active {
   background-color: rgb(var(--color-call-dark-rgb));
   transform: scale(0.98);
-}
-
-.welcome-text details {
-  margin: 12px 0;
-  transition:
-    background 0.12s ease,
-    border-color 0.12s ease,
-    box-shadow 0.12s ease;
-}
-
-.welcome-text summary {
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  display: inline-block;
-  padding: 0.15rem 0;
-}
-
-/* hide default marker and use a small chevron for both */
-.welcome-text summary::-webkit-details-marker {
-  display: none;
-}
-
-.welcome-text summary::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: 8px;
-  transition: transform 0.14s ease;
-  color: currentColor;
-  font-size: 0.95rem;
-  vertical-align: baseline;
-}
-
-.welcome-text details[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.welcome-text details {
-  /* slightly lighter card feel to blend with the section */
-  padding: 0.65rem 0;
-  border-radius: 6px;
-  background: transparent;
-  border: none;
-}
-
-.welcome-text summary {
-  color: rgb(var(--color-primary-rgb));
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-}
-
-.welcome-text details > *:not(summary) {
-  margin-top: 8px;
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-.welcome-text details[open] {
-  padding: 0.75rem;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
-}
-
-/* Slightly reduce spacing inside nested welcome content */
-.welcome-text details p,
-.welcome-text details h3,
-.welcome-text details blockquote {
-  margin: 6px 0;
 }
 
 @media (min-width: 640px) {
