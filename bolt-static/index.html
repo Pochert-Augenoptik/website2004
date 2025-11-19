@@ -51,6 +51,57 @@
     <section class="info-section" style="background-image: url('public/hero-bg.jpg');">
       <div class="info-cards-container">
         <div id="oeffnungszeiten" class="info-card">
+          <style>
+            .hours-item-compact {
+              display: flex;
+              justify-content: space-between;
+              padding: 0.75rem 0;
+              border-bottom: 1px solid rgba(255 255 255 / 0.2);
+            }
+
+            .hours-item-compact .day {
+              font-weight: 500;
+            }
+
+            .hours-item-compact .time {
+              text-align: right;
+              flex-shrink: 0;
+              margin-left: 1rem;
+            }
+
+            .hours-item-compact:first-child {
+              border-top: 1px solid rgba(255 255 255 / 0.2);
+            }
+
+            .hours-note-compact {
+              margin-top: 1rem;
+              font-style: italic;
+              opacity: 0.9;
+              font-size: 0.85rem;
+            }
+
+            .call-button {
+              background-color: rgb(var(--color-call-rgb));
+              color: white;
+              border: none;
+              padding: 0.9rem 1.5rem;
+              font-size: 0.85rem;
+              font-weight: 600;
+              letter-spacing: 0.5px;
+              cursor: pointer;
+              border-radius: 25px;
+              transition:
+                background-color 0.3s,
+                transform 0.2s;
+              width: 100%;
+              margin: 0.5rem 0;
+            }
+
+            .call-button:active {
+              background-color: rgb(var(--color-call-dark-rgb));
+              transform: scale(0.98);
+            }
+          </style>
           <h2 class="info-card-title">Öffnungszeiten</h2>
           <div class="info-card-content">
             <div class="hours-item-compact">
