@@ -247,7 +247,7 @@
           margin-bottom: 1rem;
         }
 
-        .footer-links {
+        .footer-container {
           font-size: 0.9rem;
           color: #666;
           font-weight: 400;
@@ -256,13 +256,13 @@
           gap: 0.5rem;
         }
 
-        .footer-links a {
+        .footer-container a {
           color: #666;
           text-decoration: none;
           transition: color 0.3s;
         }
 
-        .footer-links summary {
+        .footer-container summary {
           cursor: pointer;
           user-select: none;
           outline: none;
@@ -270,11 +270,11 @@
           display: inline-block; /* inline to flow like a sentence */
         }
 
-        .footer-links summary::-webkit-details-marker {
+        .footer-container summary::-webkit-details-marker {
           display: none;
         }
 
-        .footer-links summary::before {
+        .footer-container summary::before {
           content: "▸";
           display: inline-block;
           margin-right: 8px;
@@ -283,12 +283,12 @@
           vertical-align: auto;
         }
 
-        .footer-links details[open] summary::before {
+        .footer-container details[open] summary::before {
           transform: rotate(90deg);
         }
 
         /* Footer expanded content appears as regular paragraph text, slightly indented */
-        .footer-links details > *:not(summary) {
+        .footer-container details > *:not(summary) {
           margin-top: 6px;
           line-height: 1.6;
           padding-left: 0.5rem;
@@ -302,15 +302,14 @@
       </style>
       <div class="footer-container">
         <h3>Mehr Informationen</h3>
-        <div class="footer-links">
-          <a href="#kontakt">Kontakt</a>
-          <details>
-            <summary>Datenschutzerklärung</summary>
-            <p>Diese Website sammelt keinerlei Daten.</p>
-          </details>
-          <details>
-            <summary>Impressum</summary>
-            <p style="white-space: pre-line;">Augenoptik Pochert GmbH
+        <a href="#kontakt">Kontakt</a>
+        <details>
+          <summary>Datenschutzerklärung</summary>
+          <p>Diese Website sammelt keinerlei Daten.</p>
+        </details>
+        <details>
+          <summary>Impressum</summary>
+          <p style="white-space: pre-line;">Augenoptik Pochert GmbH
               Geschäftsführer: Uwe Polster, staatl. geprüfter Augenoptiker und Augenoptikmeister
               Dresdner Straße 61
               01705 Freital
@@ -321,8 +320,7 @@
               - beim Amtsgericht Dresden unter HRB 7647 eingetragen
               - Mitglied der Handwerkskammer Dresden: 0211040
               - USt-Ident-Nr: DE 1528820822 </p>
-          </details>
-        </div>
+        </details>
       </div>
     </footer>
   </body>
