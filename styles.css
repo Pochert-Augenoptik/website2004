@@ -218,17 +218,6 @@ body {
   gap: 1.5rem;
 }
 
-.contact-item h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.3px;
-}
-
-.contact-item p {
-  line-height: 1.6;
-}
-
 .button-group {
   display: flex;
   flex-wrap: wrap;
