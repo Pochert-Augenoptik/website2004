@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <title>Augenoptik Pochert - Ihr Optiker seit 1929</title>
@@ -56,12 +56,29 @@
           background-position: center;
           padding: 2rem 1.5rem;
           background-attachment: fixed;
+
+          @media (min-width: 640px) {
+            padding: 3rem 2rem;
+            min-height: auto;
+          }
+
+          @media (min-width: 1024px) {
+            padding: 4rem 2rem;
+          }
         }
 
         .info-cards-container {
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
+
+          @media (min-width: 640px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+          }
         }
 
         .info-card {
@@ -70,6 +87,10 @@
           border-radius: 8px;
           backdrop-filter: blur(10px);
           background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
+
+          @media (min-width: 640px) {
+            background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
+          }
         }
 
         .info-card-title {
@@ -77,6 +98,14 @@
           font-weight: 700;
           margin-bottom: 1.5rem;
           letter-spacing: 0.5px;
+
+          @media (min-width: 640px) {
+            font-size: 1.75rem;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 2rem;
+          }
         }
 
         .info-card-content {
@@ -119,39 +148,6 @@
         .action-button:active {
           background-color: rgb(var(--color-call-dark-rgb));
           transform: scale(0.98);
-        }
-
-        @media (min-width: 640px) {
-          .info-section {
-            padding: 3rem 2rem;
-            min-height: auto;
-          }
-
-          .info-cards-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-          }
-
-          .info-card {
-            background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
-          }
-
-          .info-card-title {
-            font-size: 1.75rem;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .info-section {
-            padding: 4rem 2rem;
-          }
-
-          .info-card-title {
-            font-size: 2rem;
-          }
         }
       </style>
       <div class="info-cards-container">
