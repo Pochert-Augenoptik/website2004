@@ -73,63 +73,45 @@
               border-top: 1px solid rgba(255 255 255 / 0.2);
             }
 
-            .hours-note-compact {
-              margin-top: 1rem;
+            .info-note {
               font-style: italic;
               opacity: 0.9;
               font-size: 0.85rem;
             }
 
-            .call-button {
-              background-color: rgb(var(--color-call-rgb));
-              color: white;
-              border: none;
-              padding: 0.9rem 1.5rem;
-              font-size: 0.85rem;
-              font-weight: 600;
-              letter-spacing: 0.5px;
-              cursor: pointer;
-              border-radius: 25px;
-              transition:
-                background-color 0.3s,
-                transform 0.2s;
-              width: 100%;
-              margin: 0.5rem 0;
-            }
-
-            .call-button:active {
-              background-color: rgb(var(--color-call-dark-rgb));
-              transform: scale(0.98);
-            }
           </style>
           <h2 class="info-card-title">Öffnungszeiten</h2>
           <div class="info-card-content">
-            <div class="hours-item-compact">
-              <span class="day">Montag</span>
-              <span class="time">09:00 – 18:30</span>
+            <div>
+              <div class="hours-item-compact">
+                <span class="day">Montag</span>
+                <span class="time">09:00 – 18:30</span>
+              </div>
+              <div class="hours-item-compact">
+                <span class="day">Dienstag</span>
+                <span class="time">09:00 – 18:30</span>
+              </div>
+              <div class="hours-item-compact">
+                <span class="day">Mittwoch</span>
+                <span class="time">09:00 – 18:30</span>
+              </div>
+              <div class="hours-item-compact">
+                <span class="day">Donnerstag</span>
+                <span class="time">09:00 – 18:30</span>
+              </div>
+              <div class="hours-item-compact">
+                <span class="day">Freitag</span>
+                <span class="time">09:00 – 18:30</span>
+              </div>
+              <div class="hours-item-compact">
+                <span class="day">Sonnabend</span>
+                <span class="time">09:00 – 11:00</span>
+              </div>
             </div>
-            <div class="hours-item-compact">
-              <span class="day">Dienstag</span>
-              <span class="time">09:00 – 18:30</span>
+            <div class="info-note">Gern auch nach Vereinbarung. Hausbesuche möglich.</div>
+            <div style="text-align: center;">
+              <a href="tel:+493516413017" class="action-button" style="width: 100%;">Rufen Sie uns jetzt an</a>
             </div>
-            <div class="hours-item-compact">
-              <span class="day">Mittwoch</span>
-              <span class="time">09:00 – 18:30</span>
-            </div>
-            <div class="hours-item-compact">
-              <span class="day">Donnerstag</span>
-              <span class="time">09:00 – 18:30</span>
-            </div>
-            <div class="hours-item-compact">
-              <span class="day">Freitag</span>
-              <span class="time">09:00 – 18:30</span>
-            </div>
-            <div class="hours-item-compact">
-              <span class="day">Sonnabend</span>
-              <span class="time">09:00 – 11:00</span>
-            </div>
-            <div class="hours-note-compact">Gern auch nach Vereinbarung. Hausbesuche möglich.</div>
-            <button class="call-button">RUFEN SIE UNS JETZT AN</button>
           </div>
         </div>
 
@@ -137,7 +119,7 @@
           <h2 class="info-card-title">Kontakt</h2>
           <div class="info-card-content">
             <div class="contact-item">
-              <p><strong>Pochert Augenoptik GmbH</strong></p>
+              <h3 style="margin-bottom: 0;">Pochert Augenoptik</h3>
               <p>Optikermeister Uwe Polster</p>
             </div>
             <div class="contact-item">
@@ -148,16 +130,16 @@
             </div>
             <div class="contact-item">
               <h3>Adresse</h3>
-              <p>Pochert Augenoptik</p>
+              <p>Pochert Augenoptik GmbH</p>
               <p>Dresdner Straße 61</p>
               <p>01705 Freital</p>
-              <p class="hours-note-compact">Gegenüber dem Rathaus Freital-Potschappel</p>
+              <p class="info-note" style="margin-top: 1rem;">Gegenüber dem Rathaus Freital-Potschappel</p>
             </div>
-            <div class="contact-item">
-              <a href="https://maps.app.goo.gl/6gWyaDgsEjqQAsz88" class="maps-link">Google Maps</a>
+            <div class="contact-item button-group">
+              <a href="https://maps.app.goo.gl/6gWyaDgsEjqQAsz88" class="action-button">Google Maps</a>
               <a
                 href="https://maps.apple.com/place?place-id=I97C20B74AF0EEFDD&address=Dresdner+Stra%C3%9Fe+61%2C+01705+Freital%2C+Germany&coordinate=51.01308%2C13.66326&name=Pochert+Augenoptik+GmbH&_provider=9902"
-                class="maps-link"
+                class="action-button"
                 >Apple Maps</a
               >
             </div>
