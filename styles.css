@@ -100,8 +100,7 @@ body {
   background-position: left;
 }
 
-.welcome,
-.footer-container {
+.text-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
@@ -315,8 +314,7 @@ body {
     padding: 2rem;
   }
 
-  .welcome,
-  .footer-container {
+  .text-container {
     padding: 3rem 2rem;
   }
 
@@ -363,8 +361,7 @@ body {
     font-size: 0.95rem;
   }
 
-  .welcome,
-  .footer-container {
+  .text-container {
     padding: 4rem 2rem;
   }
 
