@@ -95,7 +95,7 @@ body {
 
 .hero {
   height: 400px;
-  background-image: url("public/owner.jpg");
+  background-image: url("public/images/owner.jpg");
   background-size: cover;
   background-position: left;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 .info-section {
-  background-image: url("public/hero-bg.jpg");
+  background-image: url("public/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   padding: 2rem 1.5rem;
