@@ -84,7 +84,10 @@ body {
   background-position: left;
 }
 
-.welcome {
+.welcome,
+.footer-container {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
@@ -295,9 +298,8 @@ body {
     padding: 2rem;
   }
 
-  .welcome {
-    max-width: 900px;
-    margin: 0 auto;
+  .welcome,
+  .footer-container {
     padding: 3rem 2rem;
   }
 
@@ -344,7 +346,8 @@ body {
     font-size: 0.95rem;
   }
 
-  .welcome {
+  .welcome,
+  .footer-container {
     padding: 4rem 2rem;
   }
 
