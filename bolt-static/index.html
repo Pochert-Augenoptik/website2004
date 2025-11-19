@@ -248,14 +248,12 @@
         }
 
         .footer-links {
-          list-style: none;
           font-size: 0.9rem;
           color: #666;
-          font-weight: 400; /* normal weight */
-        }
-
-        .footer-links li {
-          margin-bottom: 0.5rem;
+          font-weight: 400;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
         }
 
         .footer-links a {
@@ -297,41 +295,33 @@
         }
 
         @media (min-width: 640px) {
-          .footer-column h3 {
+          .footer h3 {
             font-size: 1.2rem;
           }
         }
       </style>
       <div class="footer-container">
-        <div class="footer-column">
-          <h3>Mehr Informationen</h3>
-          <ul class="footer-links">
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li>
-              <details>
-                <summary>Datenschutzerklärung</summary>
-                <p>Diese Website sammelt keinerlei Daten.</p>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>Impressum</summary>
-                <p style="white-space: pre-line;">Augenoptik Pochert GmbH
-                  Geschäftsführer: Uwe Polster, staatl. geprüfter Augenoptiker und Augenoptikmeister
-                  Dresdner Straße 61
-                  01705 Freital
-                  Telefon & Telefax: +49 351 641 30 17
-                  E-mail: pochert.augenoptik(at)euronet-server.com
+        <h3>Mehr Informationen</h3>
+        <div class="footer-links">
+          <a href="#kontakt">Kontakt</a>
+          <details>
+            <summary>Datenschutzerklärung</summary>
+            <p>Diese Website sammelt keinerlei Daten.</p>
+          </details>
+          <details>
+            <summary>Impressum</summary>
+            <p style="white-space: pre-line;">Augenoptik Pochert GmbH
+              Geschäftsführer: Uwe Polster, staatl. geprüfter Augenoptiker und Augenoptikmeister
+              Dresdner Straße 61
+              01705 Freital
+              Telefon & Telefax: +49 351 641 30 17
+              E-mail: pochert.augenoptik(at)euronet-server.com
 
-                  Die Augenoptik Pochert GmbH ist
-                  - beim Amtsgericht Dresden unter HRB 7647 eingetragen
-                  - Mitglied der Handwerkskammer Dresden: 0211040
-                  - USt-Ident-Nr: DE 1528820822 </p>
-              </details>
-            </li>
-            <li style="display: none"><a href="#">Flut</a></li>
-            <li style="display: none"><a href="#">Alte Webseite</a></li>
-          </ul>
+              Die Augenoptik Pochert GmbH ist
+              - beim Amtsgericht Dresden unter HRB 7647 eingetragen
+              - Mitglied der Handwerkskammer Dresden: 0211040
+              - USt-Ident-Nr: DE 1528820822 </p>
+          </details>
         </div>
       </div>
     </footer>
