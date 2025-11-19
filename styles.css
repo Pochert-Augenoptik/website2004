@@ -75,9 +75,7 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   padding: 0.5rem 0.75rem;
-  transition:
-    color 0.3s,
-    background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   border-radius: 3px;
   white-space: nowrap;
 }
@@ -137,9 +135,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.07);
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.032);
   margin: 12px 0;
-  transition:
-    background 0.12s ease,
-    border-color 0.12s ease,
+  transition: background 0.12s ease, border-color 0.12s ease,
     box-shadow 0.12s ease;
 }
 
@@ -179,77 +175,6 @@ body {
   color: #555;
   font-size: 0.95rem;
   line-height: 1.8;
-}
-
-.info-section {
-  background-image: url("public/images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 2rem 1.5rem;
-  background-attachment: fixed;
-}
-
-.info-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.info-card {
-  color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
-}
-
-.info-card-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-}
-
-.info-card-content {
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1.5rem;
-}
-
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.action-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-  cursor: pointer;
-  letter-spacing: 0.3px;
-  font-weight: 600;
-  background-color: rgb(var(--color-call-rgb));
-  color: white;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15);
-}
-
-.action-button:hover {
-  background-color: rgb(var(--color-call-dark-rgb));
-  /* transform: translateY(-2px); */
-  /* transform: scale(1.02); */
-}
-
-.action-button:active {
-  background-color: rgb(var(--color-call-dark-rgb));
-  transform: scale(0.98);
 }
 
 @media (min-width: 640px) {
@@ -294,27 +219,6 @@ body {
   .welcome-text p {
     font-size: 0.95rem;
   }
-
-  .info-section {
-    padding: 3rem 2rem;
-    min-height: auto;
-  }
-
-  .info-cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .info-card {
-    background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
-  }
-
-  .info-card-title {
-    font-size: 1.75rem;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -335,14 +239,6 @@ body {
   }
 
   .welcome-title {
-    font-size: 2rem;
-  }
-
-  .info-section {
-    padding: 4rem 2rem;
-  }
-
-  .info-card-title {
     font-size: 2rem;
   }
 }
