@@ -229,26 +229,6 @@ body {
   line-height: 1.6;
 }
 
-.contact-item a {
-  color: white;
-  text-decoration: none;
-  transition: opacity 0.3s;
-  display: inline-block;
-}
-
-.contact-item a:hover {
-  opacity: 0.8;
-}
-
-.maps-link {
-  background-color: rgba(var(--color-call-rgb));
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  display: inline-block;
-  font-weight: 500;
-}
-
-/* Button group styling */
 .button-group {
   display: flex;
   flex-wrap: wrap;
