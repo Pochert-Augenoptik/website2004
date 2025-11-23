@@ -6,16 +6,8 @@
 
 @font-face {
   font-family: "Alan Sans";
-  src: url("./public/fonts/AlanSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Alan Sans";
-  src: url("./public/fonts/AlanSans-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("./public/fonts/AlanSans[wght].woff2") format("woff2-variations");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
