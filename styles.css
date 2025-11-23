@@ -42,12 +42,25 @@ h3 {
   background-image: url("public/images/owner.jpg");
   background-size: cover;
   background-position: left;
+
+  @media (min-width: 640px) {
+    height: 450px;
+    padding: 2rem;
+  }
 }
 
 .text-container {
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+
+  @media (min-width: 640px) {
+    padding: 3rem 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4rem 2rem;
+  }
 }
 
 .welcome-highlight-color {
@@ -62,6 +75,14 @@ h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   line-height: 1.3;
+
+  @media (min-width: 640px) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 }
 
 .welcome-text {
@@ -121,33 +142,4 @@ h3 {
   color: #555;
   font-size: 0.95rem;
   line-height: 1.8;
-}
-
-@media (min-width: 640px) {
-  .hero {
-    height: 450px;
-    padding: 2rem;
-  }
-
-  .text-container {
-    padding: 3rem 2rem;
-  }
-
-  .welcome-title {
-    font-size: 1.75rem;
-  }
-
-  .welcome-text p {
-    font-size: 0.95rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .text-container {
-    padding: 4rem 2rem;
-  }
-
-  .welcome-title {
-    font-size: 2rem;
-  }
 }
