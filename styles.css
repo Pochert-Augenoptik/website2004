@@ -112,33 +112,6 @@ h3 {
   background: rgb(var(--color-primary-rgb) / 0.02);
 }
 
-.welcome-text summary {
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  display: inline-block;
-  padding: 0.15rem 0;
-  color: rgb(var(--color-primary-rgb));
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-}
-
-.welcome-text summary::-webkit-details-marker {
-  display: none;
-}
-
-.welcome-text summary::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: 8px;
-  transition: transform 0.14s ease;
-  color: currentColor;
-  font-size: 0.95rem;
-  vertical-align: baseline;
-}
-
 .welcome-text details[open] summary::before {
   transform: rotate(90deg);
 }
@@ -166,4 +139,31 @@ h3 {
   .welcome-text details::details-content {
     transition-duration: 0.6s;
   }
+}
+
+.welcome-text summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  display: inline-block;
+  padding: 0.15rem 0;
+  color: rgb(var(--color-primary-rgb));
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.welcome-text summary::-webkit-details-marker {
+  display: none;
+}
+
+.welcome-text summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.14s ease;
+  color: currentColor;
+  font-size: 0.95rem;
+  vertical-align: baseline;
 }
