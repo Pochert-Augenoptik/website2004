@@ -108,9 +108,8 @@ h3 {
 }
 
 .welcome-text details[open] {
-  border-width: 2px;
-  border-color: rgba(0, 167, 157, 0.2);
-  background: rgba(0, 167, 157, 0.02);
+  border-color: rgb(var(--color-primary-rgb) / 0.2);
+  background: rgb(var(--color-primary-rgb) / 0.02);
 }
 
 .welcome-text summary {
