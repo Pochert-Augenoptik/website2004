@@ -124,6 +124,7 @@ h3 {
       line-height: 1.8;
     }
 
+    /* how to animate details: blog.logrocket.com/styling-html-modern-css */
     &::details-content {
       block-size: 0;
       overflow: hidden;
