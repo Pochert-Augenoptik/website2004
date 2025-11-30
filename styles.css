@@ -134,6 +134,7 @@ h3 {
   }
 
   summary {
+    width: 100%;
     list-style: none;
     cursor: pointer;
     user-select: none;
