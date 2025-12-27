@@ -35,24 +35,26 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          gap: 1rem;
+          gap: 2rem;
           flex-wrap: wrap;
+          padding-top: 2rem;
 
           @media (min-width: 640px) {
-            gap: 2rem;
+            padding-top: 0;
           }
         }
 
         .logo img {
-          height: 50px;
+          display: block;
+          height: 100px;
           width: auto;
 
           @media (min-width: 640px) {
-            height: 65px;
+            height: 85px;
           }
 
           @media (min-width: 1024px) {
-            height: 80px;
+            height: 100px;
           }
         }
 
@@ -62,10 +64,6 @@
           flex-wrap: wrap;
           align-items: center;
           justify-content: center;
-
-          @media (min-width: 640px) {
-            gap: 1rem 2rem;
-          }
         }
 
         .nav-link {
@@ -74,14 +72,13 @@
           font-weight: 400;
           font-size: 0.85rem;
           letter-spacing: 0.5px;
-          padding: 0.5rem 0.75rem;
+          padding: 0.25rem 0.75rem;
           transition: color 0.3s, background-color 0.3s;
           border-radius: 3px;
           white-space: nowrap;
 
           @media (min-width: 640px) {
             font-size: 0.9rem;
-            padding: 0.5rem 0;
           }
 
           &:active,
