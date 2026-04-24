@@ -9,26 +9,8 @@ const articles = await getCollection("ratgeber");
     <div class="footer-col">
       <h2 class="welcome-highlight-color">Mehr Informationen</h2>
       <a href="/#kontakt">Kontakt</a>
-      <details>
-        <summary>Datenschutzerklärung</summary>
-        <p>Diese Website sammelt keinerlei Daten.</p>
-      </details>
-      <details>
-        <summary>Impressum</summary>
-        <!-- prettier-ignore -->
-        <p style="white-space: pre-line;">Augenoptik Pochert GmbH
-Geschäftsführer: Uwe Polster, staatl. geprüfter Augenoptiker und Augenoptikmeister
-Dresdner Straße 61
-01705 Freital
-Telefon & Telefax: +49 351 641 30 17
-E-mail: pochert.augenoptik (ät) euronet-server (Punkt) com
-Für Spam: info@pochert-augenoptik.de
-
-Die Augenoptik Pochert GmbH ist
-- beim Amtsgericht Dresden unter HRB 7647 eingetragen
-- Mitglied der Handwerkskammer Dresden: 0211040
-- USt-Ident-Nr: DE 1528820822</p>
-      </details>
+      <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>
+      <a href="/impressum/">Impressum</a>
       <p>
         Fotos &copy;
         <a href="https://www.gerdedler.de" target="_blank" rel="noopener noreferrer">
@@ -106,50 +88,6 @@ Die Augenoptik Pochert GmbH ist
       text-underline-offset: 0.28em;
     }
 
-    details[open] {
-      background-color: #f0f0f0;
-      border-radius: 6px;
-
-      &::details-content {
-        margin-top: 6px;
-        line-height: 1.6;
-        padding: 0rem 1rem 0.5rem;
-      }
-
-      summary::before {
-        transform: rotate(90deg);
-      }
-    }
-
-    summary {
-      width: 100%;
-      cursor: pointer;
-      user-select: none;
-      outline: none;
-      padding: 0.15rem 0;
-      display: inline-block;
-      color: rgb(var(--color-primary-dark-rgb));
-      font-weight: 600;
-      text-underline-offset: 0.18em;
-
-      &::-webkit-details-marker {
-        display: none;
-      }
-
-      &::before {
-        content: "▸";
-        display: inline-block;
-        margin-right: 8px;
-        transition: transform 0.14s ease;
-        color: currentColor;
-        vertical-align: auto;
-      }
-
-      &:hover, &:focus-visible {
-        text-decoration: underline;
-        text-underline-offset: 0.28em;
-      }
-    }
   }
 
   .footer-article-list {
