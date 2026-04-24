@@ -41,7 +41,7 @@ const articles = await getCollection("ratgeber");
           <ul class="footer-article-list">
             {articles.map((article) => (
               <li>
-                <a href={`/ratgeber/${article.id}/`}>{article.data.title}</a>
+                <a href={`/ratgeber/${article.id}/`}>{article.data.title.split(" – ")[0].split(" - ")[0]}</a>
               </li>
             ))}
           </ul>
