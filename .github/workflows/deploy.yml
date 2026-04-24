@@ -1,14 +1,12 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -24,14 +22,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout
         uses: actions/checkout@v5
+
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         with:
-          package-manager: pnpm@latest
+          package-manager: npm
 
-  deploy:
+  deploy-gh-pages:
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -41,3 +40,30 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy-sftp:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy via SFTP
+        run: |
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            open sftp://${{ secrets.SFTP_USER }}:${{ secrets.SFTP_PASS }}@${{ secrets.SFTP_HOST }};
+            mirror --reverse --delete --verbose dist/ ${{ secrets.SFTP_PATH }};
+          "
