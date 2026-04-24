@@ -213,8 +213,7 @@ Die Augenoptik Pochert GmbH ist
 
     :global(a) {
       color: rgb(var(--color-primary-dark-rgb));
-      text-decoration: underline;
-      text-underline-offset: 0.18em;
+      text-decoration: none;
       transition: color 0.3s;
       font-weight: 600;
     }
@@ -262,6 +261,11 @@ Die Augenoptik Pochert GmbH ist
         transition: transform 0.14s ease;
         color: currentColor;
         vertical-align: auto;
+      }
+
+      &:hover, &:focus-visible {
+        text-decoration: underline;
+        text-underline-offset: 0.28em;
       }
     }
   }
