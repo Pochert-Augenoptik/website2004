@@ -1,8 +1,10 @@
 import { defineConfig, fontProviders } from "astro/config";
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  integrations: [mdx()],
+  site: "https://pochert-augenoptik.de",
+  integrations: [mdx(), sitemap()],
   fonts: [
     {
       provider: fontProviders.bunny(),
