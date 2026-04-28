@@ -5,6 +5,9 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://pochert-augenoptik.de",
   integrations: [mdx(), sitemap()],
+  image: {
+    responsiveStyles: true,
+  },
   fonts: [
     {
       provider: fontProviders.bunny(),

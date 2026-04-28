@@ -1,12 +1,13 @@
 ---
-
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
 ---
 
 <header class="header">
   <div class="header-container">
     <div class="logo">
       <a href="/">
-        <img src="/images/Logo-Augenoptik-Pochert-1.avif" alt="Augenoptik Pochert Logo" />
+        <Image src={logo} alt="Augenoptik Pochert Logo" height={100} format="avif" />
       </a>
     </div>
     <nav class="nav">

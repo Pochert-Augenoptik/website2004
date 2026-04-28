@@ -1,14 +1,22 @@
 ---
+import { Picture, getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ownerImg from "../assets/owner.jpg";
+import heroBgImg from "../assets/hero-bg.jpg";
+
+const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
 ---
 
 <BaseLayout>
-  <img
+  <Picture
     class="hero"
-    src="/images/owner.avif"
+    src={ownerImg}
+    formats={["avif", "webp"]}
     alt="Uwe Polster - Inhaber von Augenoptik Pochert"
     loading="eager"
     fetchpriority="high"
+    layout="constrained"
+    width={900}
   />
 
   <section class="text-container">
@@ -29,7 +37,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="info-section">
+  <section class="info-section" style={`background-image: url(${heroBg.src})`}>
     <div class="info-cards-container">
       <div id="oeffnungszeiten" class="info-card">
         <h2 class="info-card-title">Öffnungszeiten</h2>
@@ -187,7 +195,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <style>
   .info-section {
-    background-image: url("/images/hero-bg.avif");
     background-size: cover;
     background-position: center;
     padding: 2rem 1.5rem;
