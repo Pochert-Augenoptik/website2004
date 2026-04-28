@@ -115,7 +115,9 @@ h3 {
     &::details-content {
       block-size: 0;
       overflow: hidden;
-      transition: content-visibility 0.3s ease, block-size 0.3s ease;
+      transition:
+        content-visibility 0.3s ease,
+        block-size 0.3s ease;
       transition-behavior: allow-discrete;
     }
 
