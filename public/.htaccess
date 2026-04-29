@@ -1,0 +1,66 @@
+# ----------------------------------------------------------------------
+# PERFORMANCE-KONFIGURATION FÜR STATISCHE WEBSEITEN
+# ----------------------------------------------------------------------
+
+# 1. BROWSER CACHING (mod_expires)
+# Hiermit sagen wir dem Browser, wie lange er Dateien lokal speichern darf.
+# Statische Dateien wie Bilder ändern sich selten, daher sind 30 Tage ideal.
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Standard-Cachezeit (falls unten nichts spezifisch definiert ist)
+    ExpiresDefault "access plus 2 days"
+
+    # Bilder: Verhindert das erneute Laden bei jedem Seitenbesuch
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType image/avif "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType image/x-icon "access plus 30 days"
+
+    # Webfonts: Da diese sich fast nie ändern, ist Caching hier extrem effektiv
+    ExpiresByType font/ttf "access plus 30 days"
+    ExpiresByType font/woff "access plus 30 days"
+    ExpiresByType font/woff2 "access plus 30 days"
+
+    # CSS & JavaScript: Wichtig für das schnelle Rendern der Seite
+    ExpiresByType text/css "access plus 30 days"
+    ExpiresByType application/javascript "access plus 30 days"
+</IfModule>
+
+# 2. GZIP-KOMPRIMIERUNG (mod_deflate)
+# Reduziert die Dateigröße beim Übertragen vom Server zum Browser.
+# Textbasierte Dateien lassen sich oft um bis zu 70-80% verkleinern.
+<IfModule mod_deflate.c>
+    # Komprimierung für alle textbasierten Formate aktivieren
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE image/svg+xml
+
+    # Komprimierung für Fonts (TTF & OTF profitieren, WOFF2 ist bereits intern komprimiert)
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+
+    # Logik: Bilder (JPG, PNG, WebP) niemals komprimieren
+    # Diese Formate sind bereits binär gepackt; eine Gzip-Behandlung würde nur CPU-Last erzeugen
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|avif)$ no-gzip dont-vary
+</IfModule>
+
+# 3. HTTP-HEADER ANPASSUNGEN (mod_headers)
+# Zusätzliche Anweisungen für moderne Browser und Zwischenspeicher (Proxies).
+<IfModule mod_headers.c>
+    # Cache-Control Header als Verstärkung zu mod_expires
+    <FilesMatch "\.(jpg|jpeg|png|webp|avif|ttf|woff2|css|js)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+
+    # Vary: Accept-Encoding sorgt dafür, dass Browser die richtige Version
+    # (komprimiert oder unkomprimiert) aus dem Cache ziehen.
+    Header append Vary Accept-Encoding
+</IfModule>
