@@ -22,9 +22,9 @@ import logo from "../assets/logo.png";
 
 <style>
   .header {
-    background-color: white;
+    background-color: var(--color-background);
     padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0 0 0 / 0.15);
+    box-shadow: 0 4px 8px var(--color-shadow);
     z-index: 100;
 
     @media (min-width: 640px) {
@@ -71,7 +71,7 @@ import logo from "../assets/logo.png";
 
   .nav-link {
     text-decoration: none;
-    color: #555;
+    color: var(--color-nav-link);
     font-weight: 400;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
@@ -88,11 +88,11 @@ import logo from "../assets/logo.png";
 
     &:active,
     &.active {
-      color: rgb(var(--color-primary-dark-rgb));
+      color: var(--color-nav-link-active);
     }
 
     &.phone {
-      color: rgb(var(--color-primary-dark-rgb));
+      color: var(--color-nav-link-active);
     }
   }
 </style>

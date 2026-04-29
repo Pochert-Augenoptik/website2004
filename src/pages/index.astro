@@ -224,11 +224,11 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
   }
 
   .info-card {
-    color: white;
+    color: var(--color-on-primary);
     padding: 1.5rem;
     border-radius: 8px;
     backdrop-filter: blur(10px);
-    background-color: rgba(var(--color-primary-dark-rgb) / 0.8);
+    background-color: color-mix(in srgb, var(--color-primary-dark) 80%, transparent);
   }
 
   .info-card-title {
@@ -271,17 +271,17 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
     cursor: pointer;
     letter-spacing: 1px;
     font-weight: 600;
-    background-color: rgb(var(--color-call-rgb));
-    color: white;
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-cta);
+    color: var(--color-on-primary);
+    box-shadow: 0 4px 7px var(--color-shadow);
   }
 
   .action-button:hover {
-    background-color: rgb(var(--color-call-dark-rgb));
+    background-color: var(--color-cta-hover);
   }
 
   .action-button:active {
-    background-color: rgb(var(--color-call-dark-rgb));
+    background-color: var(--color-cta-hover);
     transform: scale(0.98);
   }
 
@@ -295,7 +295,7 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 0.5rem;
-    border-bottom: 1px solid rgba(255 255 255 / 0.2);
+    border-bottom: 1px solid var(--color-on-primary-border);
   }
 
   .hours-item-compact .day {
@@ -309,7 +309,7 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
   }
 
   .hours-item-compact:first-child {
-    border-top: 1px solid rgba(255 255 255 / 0.2);
+    border-top: 1px solid var(--color-on-primary-border);
   }
 
   .contact-item h3 {

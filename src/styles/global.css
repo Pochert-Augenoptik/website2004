@@ -6,21 +6,77 @@
 
 html {
   scroll-behavior: smooth;
+  /* On-primary dividers (used on dark/colored backgrounds) */
+  --color-on-primary-border: rgba(255, 255, 255, 0.2);
 }
 
+/* PRIMITIVES — palette */
 :root {
-  --color-primary-rgb: 0 167 157; /* #00a79d */
-  --color-primary-dark-rgb: 0 140 130;
-  --color-call-rgb: 0 76 129;
-  --color-call-dark-rgb: 0 57 97;
-  --color-ocker-rgb: 223 230 221;
+  --teal-500: #00a79d;
+  --teal-600: #008c82;
+  --blue-700: #004c81;
+  --blue-800: #003961;
+  --blue-accent: #1675bf;
+  --sage-100: #dfe6dd;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-500: #888;
+  --gray-600: #666;
+  --gray-700: #555;
+  --gray-800: #333;
+  --white: #ffffff;
+  --black: #000000;
   font-size: 14pt;
+}
+
+/* SEMANTICS — how the palette is applied */
+:root {
+  /* Brand / primary */
+  --color-primary: var(--teal-500);
+  --color-primary-dark: var(--teal-600);
+
+  /* Call-to-action buttons */
+  --color-cta: var(--blue-700);
+  --color-cta-hover: var(--blue-800);
+
+  /* Accent (highlight headings, welcome color) */
+  --color-accent: var(--blue-accent);
+
+  /* Text */
+  --color-text: var(--gray-800);
+  --color-text-muted: var(--gray-700);
+  --color-text-subtle: var(--gray-600);
+  --color-text-faint: var(--gray-500);
+
+  /* Backgrounds */
+  --color-background: var(--white);
+  --color-background-subtle: var(--gray-100);
+
+  /* Borders / shadows (kept as rgba for alpha support) */
+  --color-border: rgba(0, 0, 0, 0.07);
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --color-shadow: rgba(0, 0, 0, 0.15);
+  --color-shadow-soft: rgba(0, 0, 0, 0.032);
+
+  /* On-primary text (e.g. button labels, card text on dark bg) */
+  --color-on-primary: var(--white);
+
+  /* Links */
+  --color-link: var(--teal-600);
+
+  /* Nav */
+  --color-nav-link: var(--gray-700);
+  --color-nav-link-active: var(--teal-600);
+
+  /* Details / accordion */
+  --color-details-border-open: color-mix(in srgb, var(--teal-600) 20%, transparent);
+  --color-details-bg-open: color-mix(in srgb, var(--teal-600) 2%, transparent);
 }
 
 body {
   font-family: var(--font-alan-sans), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background-color: white;
+  color: var(--color-text);
+  background-color: var(--color-background);
   line-height: 1.6;
 }
 
@@ -56,7 +112,7 @@ h3 {
 }
 
 .welcome-highlight-color {
-  color: #1675bf;
+  color: var(--color-accent);
 }
 
 .font-bold {
@@ -78,7 +134,7 @@ h3 {
 }
 
 .welcome-text {
-  color: #555;
+  color: var(--color-text-muted);
   line-height: 1.7;
 
   p {
@@ -88,15 +144,15 @@ h3 {
   details {
     padding: 0.4rem 1rem;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.07);
-    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.032);
+    background: color-mix(in srgb, var(--color-background) 2%, transparent);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 7px var(--color-shadow-soft);
     margin: 12px 0;
     interpolate-size: allow-keywords;
 
     &[open] {
-      border-color: rgb(var(--color-primary-dark-rgb) / 0.2);
-      background: rgb(var(--color-primary-dark-rgb) / 0.02);
+      border-color: var(--color-details-border-open);
+      background: var(--color-details-bg-open);
 
       summary::before {
         transform: rotate(90deg);
@@ -136,7 +192,7 @@ h3 {
     outline: none;
     display: inline-block;
     padding: 0.15rem 0;
-    color: rgb(var(--color-primary-dark-rgb));
+    color: var(--color-link);
     font-weight: 600;
     letter-spacing: 0.3px;
 
