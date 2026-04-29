@@ -42,32 +42,32 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
       <div id="oeffnungszeiten" class="info-card">
         <h2 class="info-card-title">Öffnungszeiten</h2>
         <div class="info-card-content">
-          <div>
+        <dl>
             <div class="hours-item-compact">
-              <span class="day">Montag</span>
-              <span class="time">09:00 – 18:30</span>
+              <dt class="day">Montag</dt>
+              <dd class="time">09:00 – 18:30</dd>
             </div>
             <div class="hours-item-compact">
-              <span class="day">Dienstag</span>
-              <span class="time">09:00 – 18:30</span>
+              <dt class="day">Dienstag</dt>
+              <dd class="time">09:00 – 18:30</dd>
             </div>
             <div class="hours-item-compact">
-              <span class="day">Mittwoch</span>
-              <span class="time">09:00 – 18:30</span>
+              <dt class="day">Mittwoch</dt>
+              <dd class="time">09:00 – 18:30</dd>
             </div>
             <div class="hours-item-compact">
-              <span class="day">Donnerstag</span>
-              <span class="time">09:00 – 18:30</span>
+              <dt class="day">Donnerstag</dt>
+              <dd class="time">09:00 – 18:30</dd>
             </div>
             <div class="hours-item-compact">
-              <span class="day">Freitag</span>
-              <span class="time">09:00 – 18:30</span>
+              <dt class="day">Freitag</dt>
+              <dd class="time">09:00 – 18:30</dd>
             </div>
             <div class="hours-item-compact">
-              <span class="day">Samstag</span>
-              <span class="time">09:00 – 11:00</span>
+              <dt class="day">Samstag</dt>
+              <dd class="time">09:00 – 11:00</dd>
             </div>
-          </div>
+          </dl>
           <div class="info-note" style="text-align: center">Gern auch nach Vereinbarung. Hausbesuche möglich.</div>
           <div style="text-align: center">
             <a href="tel:+493516413017" class="action-button">Rufen Sie uns jetzt an</a>
@@ -296,6 +296,10 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
     justify-content: space-between;
     padding: 0.75rem 0.5rem;
     border-bottom: 1px solid var(--color-on-primary-border);
+
+    dd {
+      margin: 0;
+    }
   }
 
   .hours-item-compact .day {
