@@ -39,7 +39,7 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
 
   <section class="info-section" style={`background-image: url(${heroBg.src})`}>
     <div class="info-cards-container">
-      <div id="oeffnungszeiten" class="info-card">
+      <section id="oeffnungszeiten" class="info-card">
         <h2 class="info-card-title">Öffnungszeiten</h2>
         <div class="info-card-content">
         <dl>
@@ -73,9 +73,9 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
             <a href="tel:+493516413017" class="action-button">Rufen Sie uns jetzt an</a>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="kontakt" class="info-card">
+      <section id="kontakt" class="info-card">
         <h2 class="info-card-title">Kontakt</h2>
         <div class="info-card-content">
           <div class="contact-item">
@@ -103,7 +103,7 @@ const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
             >
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </section>
 
