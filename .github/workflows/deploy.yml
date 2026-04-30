@@ -68,9 +68,8 @@ jobs:
             # Accept the server's host key automatically
             set sftp:auto-confirm yes;
 
-            # Instruct lftp to send the -a flag (all) to the server when requesting a file list
-            # Ensures hidden files (dot-files, e.g. .htaccess) are visible
-            set ftp:list-options -a;
+            # Clear the default exclude-regex which hides dot-files like .htaccess
+            set mirror:exclude-regex '';
 
             # Connect to the host; password is read from LFTP_PASSWORD env var
             open --env-password -u ${{ secrets.SFTP_USER }} sftp://${{ secrets.SFTP_HOST }};
