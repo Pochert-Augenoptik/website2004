@@ -68,13 +68,11 @@ jobs:
             # Accept the server's host key automatically
             set sftp:auto-confirm yes;
 
-            # Clear the default exclude-regex which hides dot-files like .htaccess
-            set mirror:exclude-regex '';
-
             # Connect to the host; password is read from LFTP_PASSWORD env var
             open --env-password -u ${{ secrets.SFTP_USER }} sftp://${{ secrets.SFTP_HOST }};
 
             # --reverse: Upload local to remote
             # --delete: Remove files on server not present in local dist/
-            mirror --reverse --delete --verbose dist/ ${{ secrets.SFTP_PATH }};
+            # -i includes dot-files like .htaccess which are excluded by default
+            mirror --reverse --delete --verbose -i '.' dist/ ${{ secrets.SFTP_PATH }};
           "
