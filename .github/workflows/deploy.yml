@@ -35,6 +35,7 @@ jobs:
         with:
           name: site-dist
           path: dist
+          include-hidden-files: true
 
   deploy-gh-pages:
     needs: build
@@ -74,5 +75,5 @@ jobs:
             # --reverse: Upload local to remote
             # --delete: Remove files on server not present in local dist/
             # -i includes dot-files like .htaccess which are excluded by default
-            mirror --reverse --delete --verbose -i '.' dist/ ${{ secrets.SFTP_PATH }};
+            mirror --reverse --delete --verbose dist/ ${{ secrets.SFTP_PATH }};
           "
