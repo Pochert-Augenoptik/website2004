@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-sftp:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,34 +29,6 @@ jobs:
         uses: withastro/action@v5
         with:
           package-manager: npm
-
-      - name: Upload dist artifact for SFTP deploy
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-dist
-          path: dist
-          include-hidden-files: true
-
-  deploy-gh-pages:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  deploy-sftp:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download dist artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: site-dist
-          path: dist
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
@@ -77,3 +49,14 @@ jobs:
             # -i includes dot-files like .htaccess which are excluded by default
             mirror --reverse --delete --verbose dist/ ${{ secrets.SFTP_PATH }};
           "
+
+  deploy-gh-pages:
+    needs: build-and-sftp
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
