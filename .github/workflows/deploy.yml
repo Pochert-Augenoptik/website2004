@@ -61,23 +61,21 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y lftp
 
       - name: Deploy via SFTP
+        env:
+          LFTP_PASSWORD: ${{ secrets.SFTP_PASS }}
         run: |
           lftp -c "
             # Accept the server's host key automatically
             set sftp:auto-confirm yes;
 
-            # Handle special characters by setting the password separately
-            set sftp:password '${{ secrets.SFTP_PASS }}';
-
             # Instruct lftp to send the -a flag (all) to the server when requesting a file list
-            # Ensures hidden files (dot-files) are visible
+            # Ensures hidden files (dot-files, e.g. .htaccess) are visible
             set ftp:list-options -a;
 
-            # Connect to the host
-            open -u ${{ secrets.SFTP_USER }}, sftp://${{ secrets.SFTP_HOST }};
+            # Connect to the host; password is read from LFTP_PASSWORD env var
+            open --env-password -u ${{ secrets.SFTP_USER }} sftp://${{ secrets.SFTP_HOST }};
 
             # --reverse: Upload local to remote
             # --delete: Remove files on server not present in local dist/
-            # --include-obvious-hidden: Do not ignore files starting with '.'
-            mirror --reverse --delete --verbose --include-obvious-hidden dist/ ${{ secrets.SFTP_PATH }};
+            mirror --reverse --delete --verbose dist/ ${{ secrets.SFTP_PATH }};
           "
