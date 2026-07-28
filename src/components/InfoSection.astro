@@ -1,0 +1,211 @@
+---
+import { getImage } from "astro:assets";
+import heroBgImg from "../assets/hero-bg.jpg";
+
+const heroBg = await getImage({ src: heroBgImg, format: "avif", quality: 80 });
+---
+
+<section class="info-section" style={`background-image: url(${heroBg.src})`}>
+  <div class="info-cards-container">
+    <section id="oeffnungszeiten" class="info-card">
+      <h2 class="info-card-title">Öffnungszeiten</h2>
+      <div class="info-card-content">
+        <dl>
+          <div class="hours-item-compact">
+            <dt class="day">Montag</dt>
+            <dd class="time">09:00 – 18:30</dd>
+          </div>
+          <div class="hours-item-compact">
+            <dt class="day">Dienstag</dt>
+            <dd class="time">09:00 – 18:30</dd>
+          </div>
+          <div class="hours-item-compact">
+            <dt class="day">Mittwoch</dt>
+            <dd class="time">09:00 – 18:30</dd>
+          </div>
+          <div class="hours-item-compact">
+            <dt class="day">Donnerstag</dt>
+            <dd class="time">09:00 – 18:30</dd>
+          </div>
+          <div class="hours-item-compact">
+            <dt class="day">Freitag</dt>
+            <dd class="time">09:00 – 18:30</dd>
+          </div>
+          <div class="hours-item-compact">
+            <dt class="day">Samstag</dt>
+            <dd class="time">09:00 – 11:00</dd>
+          </div>
+        </dl>
+        <div class="info-note" style="text-align: center">Gern auch nach Vereinbarung. Hausbesuche möglich.</div>
+        <div style="text-align: center">
+          <a href="tel:+493516413017" class="action-button">Rufen Sie uns jetzt an</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="info-card">
+      <h2 class="info-card-title">Kontakt</h2>
+      <div class="info-card-content">
+        <div class="contact-item">
+          <h3 style="margin-bottom: 0">Pochert Augenoptik</h3>
+          <p>Optikermeister Uwe Polster</p>
+        </div>
+        <div class="contact-item">
+          <h3>Kontakt</h3>
+          <p>Telefon: (0351) 641 30 17</p>
+          <p>Telefax: (0351) 641 30 17</p>
+          <p>Email:<br />pochert.augenoptik (ät) euronet-server (Punkt) com</p>
+        </div>
+        <div class="contact-item">
+          <h3>Adresse</h3>
+          <p>Pochert Augenoptik GmbH</p>
+          <p>Dresdner Straße 61</p>
+          <p>01705 Freital</p>
+          <p class="info-note" style="margin-top: 1rem">Gegenüber dem Rathaus Freital-Potschappel</p>
+        </div>
+        <div class="contact-item button-group">
+          <a href="https://maps.app.goo.gl/6gWyaDgsEjqQAsz88" class="action-button">Google Maps</a>
+          <a
+            href="https://maps.apple.com/place?place-id=I97C20B74AF0EEFDD&address=Dresdner+Stra%C3%9Fe+61%2C+01705+Freital%2C+Germany&coordinate=51.01308%2C13.66326&name=Pochert+Augenoptik+GmbH&_provider=9902"
+            class="action-button">Apple Maps</a
+          >
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<style>
+  .info-section {
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1.5rem;
+    background-attachment: fixed;
+
+    @media (min-width: 640px) {
+      padding: 3rem 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  .info-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media (min-width: 800px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  }
+
+  .info-card {
+    color: var(--color-on-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    background-color: color-mix(in srgb, var(--color-primary-dark) 80%, transparent);
+  }
+
+  .info-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+
+    @media (min-width: 640px) {
+      font-size: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
+
+  .info-card-content {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .action-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background-color: var(--color-cta);
+    color: var(--color-on-primary);
+    box-shadow: 0 4px 7px var(--color-shadow);
+  }
+
+  .action-button:hover {
+    background-color: var(--color-cta-hover);
+  }
+
+  .action-button:active {
+    background-color: var(--color-cta-hover);
+    transform: scale(0.98);
+  }
+
+  .info-note {
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 0.85rem;
+  }
+
+  .hours-item-compact {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid var(--color-on-primary-border);
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  .hours-item-compact .day {
+    font-weight: 500;
+  }
+
+  .hours-item-compact .time {
+    text-align: right;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .hours-item-compact:first-child {
+    border-top: 1px solid var(--color-on-primary-border);
+  }
+
+  .contact-item h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+  }
+
+  .contact-item p {
+    line-height: 1.6;
+  }
+</style>
