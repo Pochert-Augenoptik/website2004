@@ -15,7 +15,7 @@ const pageTitle = `${title} – Augenoptik Pochert`;
 <BaseLayout title={pageTitle} description={description}>
   <article class="text-container">
     <header class="article-header">
-      <h1 class="article-title welcome-highlight-color">{title}</h1>
+      <h1 class="article-title accent-color">{title}</h1>
       {
         publishDate && (
           <time class="article-date" datetime={publishDate}>
@@ -28,7 +28,7 @@ const pageTitle = `${title} – Augenoptik Pochert`;
         )
       }
     </header>
-    <div class="article-body welcome-text">
+    <div class="article-body prose">
       <slot />
     </div>
     <footer class="article-footer">

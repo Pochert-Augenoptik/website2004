@@ -7,7 +7,7 @@ const articles = await getCollection("ratgeber");
 <footer class="footer">
   <div class="footer-inner text-container">
     <div class="footer-col">
-      <h2 class="welcome-highlight-color">Mehr Informationen</h2>
+      <h2 class="accent-color">Mehr Informationen</h2>
       <a href="/#kontakt">Kontakt</a>
       <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>
       <a href="/impressum/">Impressum</a>
@@ -31,7 +31,7 @@ const articles = await getCollection("ratgeber");
     {
       articles.length > 0 && (
         <div class="footer-col">
-          <h2 class="welcome-highlight-color">Ratgeber</h2>
+          <h2 class="accent-color">Ratgeber</h2>
           <ul class="footer-article-list">
             {articles.map((article) => (
               <li>

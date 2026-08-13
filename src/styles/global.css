@@ -100,11 +100,11 @@ h3 {
   }
 }
 
-.welcome-highlight-color {
+.accent-color {
   color: var(--color-accent);
 }
 
-.welcome-text {
+.prose {
   color: var(--color-text-muted);
   line-height: 1.7;
 
