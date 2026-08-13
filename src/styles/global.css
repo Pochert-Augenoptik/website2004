@@ -85,3 +85,30 @@ h2,
 h3 {
   font-weight: 600;
 }
+
+.text-container {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+
+  @media (min-width: 640px) {
+    padding: 3rem 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.welcome-highlight-color {
+  color: var(--color-accent);
+}
+
+.welcome-text {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
